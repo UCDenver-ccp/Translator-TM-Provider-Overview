@@ -6,7 +6,7 @@ Overview of the Translator Text Mining Provider prototype
 
 # Milestone 1: BioStacks -- A framework facilitating layered annotation of the biomedical literature
 
-[text](https://github.com/UCDenver-ccp/Translator-TM-Provider-Overview/blob/master/images/tm-provider-architecture.png "TM Provider architecture diagram")
+![text](https://github.com/UCDenver-ccp/Translator-TM-Provider-Overview/blob/master/images/tm-provider-architecture.png "TM Provider architecture diagram")
 
 ## Extensible design
 Services are 
