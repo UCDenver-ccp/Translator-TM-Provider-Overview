@@ -21,7 +21,7 @@ turku-neural-parser-svc-ipaddress       104.197.244.150
 
 Example call of the Turku neural parsing service using cURL:
 ```
-curl http://104.197.244.150 -X POST -d "This is an example sentence, nothing more, nothing less."
+curl -X POST -d "This is an example sentence, nothing more, nothing less." http://104.197.244.150
 ```
 
 Results contain dependency parse information in the [CoNLL-U file format](https://universaldependencies.org/format.html).
@@ -85,6 +85,24 @@ sentence co-occurrence as a proxy + Ignacio's results
 
 # Milestone 2: NLP evaluation service for concept recognition systems
 nlp-eval-svc-ipaddress                  35.193.207.6
+
+
+
+| Ontology  | OGER-CRAFT | MetaMap Lite | ConceptMapper |
+| ------------- | ------------- | ------------- | ------------- |
+| ChEBI         |      0.770    |     n/a       |               |
+| CL            |      0.649    |     n/a       |               |
+| GO BP         |      0.804    |               |               |
+| GO CC         |      0.764    |               |               |
+| GO MF         |      0.956    |               |               |
+| MOP           |      0.871    | n/a           |               |
+| NCBITaxon     |      0.969    |               |               |
+| PR            |      0.544    |  n/a          |               |
+| SO            |      0.895    |  n/a          |               |
+| UBERON        |      0.749    |  n/a          |               |
+
+
+
 
 
 
