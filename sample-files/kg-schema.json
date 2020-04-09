@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/UCDenver-ccp/Translator-TM-Provider-Overview/raw/master/sample-files/kg-schema.json",
+    "title": "Concept cooccurrence knowledge graph",
+    "description": "A simple knowledge graph schema where nodes are assumed to be ontology concepts, referenced by ontology identifier, and edges between nodes indicate cooccurrence of two concepts in a sentence.",
+    "$defs": {
+        "Node": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "edges": {
+            "description": "an edge indicates cooccurence of two ontology concepts in a sentence",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "evidence": {
+                        "description": "a list of document identifiers where the cooccurence of concepts was observed",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "node1": {
+                        "$ref": "#/$defs/Node"
+                    },
+                    "node2": {
+                        "$ref": "#/$defs/Node"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "description": "each node represents a unique ontology concept observed in a corpus of documents",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/Node"
+            }
+        }
+    }
+}
